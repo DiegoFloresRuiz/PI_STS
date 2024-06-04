@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tu Aplicación</title>
+<style>
+/* Estilos CSS internos */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  margin: 0;
+}
+
+nav {
+  background-color: #000000;
+  padding: 15px 0;
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  width: 700px;
+  background-color: #ffffff;
+  box-shadow: 0 0 5px black;
+  padding: 20px;
+  margin: 30px auto; 
+  margin-top: 8%;
+}
+
+.image-container {
+  flex: 1;
+  text-align: center;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.form-container {
+  flex: 1;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  box-sizing: border-box;
+}
+
+.btn-submit {
+  width: 200px;
+  padding: 10px;
+  background-color: #000000;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.btn-submit:hover {
+  background-color: #464746;
+}
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  margin-top: 116px;
+}
+</style>
+</head>
+<body>
+  <nav>
+    <ul>
+        <li><a href="{{ url_for('inicio') }}">Inicio</a></li>
+        <li><a href="{{ url_for('tkd') }}">Taekwondo</a></li>
+        <li><a href="{{ url_for('nat') }}">Natación</a></li>
+        <li><a href="{{ url_for('bl') }}">Baloncesto</a></li>
+        <li><a href="{{ url_for('fut') }}">Futbol</a></li>
+        <li><a href="{{ url_for('bol') }}">Voleibol</a></li>
+        <li><a href="{{ url_for('box') }}">Box</a></li>
+        <li><a href="{{ url_for('don') }}">Donar</a></li>
+        <li><a href="{{ url_for('index')}}">Cerrar sesion</a></li>
+    </ul>
+</nav>
+
+<div class="container">
+  <div class="image-container">
+      <img src="{{ url_for('static', filename='logo.png') }}" alt="Imagen de deporte">
+  </div>
+  <div class="form-container">
+      <h1>Natación</h1>
+
+      <form id="formulario" method="POST">
+          <select name="equipo" id="equipo" class="form-control" required>
+              <option value="" disabled selected>Selecciona un articulo</option>
+              <option value="equipo1">Gorro</option>
+              <option value="equipo2">Aletas</option>
+              <option value="equipo3">Gogles</option>
+          </select>
+          <input type="text" name="Color" id="Color" class="form-control" placeholder="Color" required>
+          <input type="number" name="Talla" id="Talla" class="form-control" placeholder="Talla" required>
+          <input type="text" name="Equipo" id="Equipo" class="form-control" placeholder="Nombre de equipo opciónal">
+          <center>
+          <button type="submit" class="btn-submit">Seleccionar</button>
+        </center>
+      </form>
+  </div>
+</div>
+
+<div class="footer">
+    <p>&copy; 2024 Susten Team Sports. Salud, Mente y Cuerpo.</p>
+  </div>
+
+</body>
+</html>
