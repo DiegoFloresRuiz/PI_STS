@@ -76,7 +76,7 @@ def registro():
         return redirect(url_for('index'))
     return render_template('registro.html')
 
-# Agrega más rutas y funciones según sea necesario
+
 
 if __name__=='__main__':
     app.run(port= 9005, debug=True)
