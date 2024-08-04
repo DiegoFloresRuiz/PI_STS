@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inicio - STS</title>
+<style>
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+}
+
+.description {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.links {
+  margin-top: 50px;
+}
+
+.links a {
+  margin-right: 20px;
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+}
+
+.links a:hover {
+  color: #007bff;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background-color: #000000;
+  color: #fff;
+  padding: 15px 20px;
+  text-align: center;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 20px;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+</style>
+</head>
+<body>
+  <div class="navbar">
+    <a href="{{ url_for('login') }}">Iniciar sesión</a>
+    <a href="{{ url_for('registro') }}">Registrarse</a>
+
+  </div>
+<div class="container">
+  <img src="{{ url_for('static', filename='logo.png') }}" alt="Imagen 1">
+  <div class="description">
+    <p>Bienvenido a Susten Team Sports, La plataforma en línea para colaboración educativa en deportes.</p>
+
+</div>
+</body>
+</html>
